@@ -1,9 +1,19 @@
 import React from 'react'
-type greetType={
-  name:String
+import Person from './Person'
+type greetType = {
+  name: String
+  messageCount: number
+  isLoggedIn: boolean
 }
-export default function Greet(props:greetType) {
+export default function Greet(props: greetType) {
+  const personName={
+    firstName:"Ramesh",
+    lastName:"Banakar"
+  }
   return (
-    <div>welcome {props.name}! you have 10 unread messages</div>
+    <>
+    {props.isLoggedIn ? <div>welcome {props.name}! you have {props.messageCount} unread messages</div> : <div>welcome Guest! you have {props.messageCount} unread messages</div>}
+    <Person name={personName}/>
+    </>
   )
 }
