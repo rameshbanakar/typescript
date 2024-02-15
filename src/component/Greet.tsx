@@ -1,7 +1,9 @@
 import React from 'react'
-
-export default function Greet() {
+type greetType={
+  name:String
+}
+export default function Greet(props:greetType) {
   return (
-    <div>Greet</div>
+    <div>welcome {props.name}! you have 10 unread messages</div>
   )
 }
