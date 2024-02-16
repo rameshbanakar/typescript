@@ -1,11 +1,6 @@
 import React from 'react'
-type propsType={
-    name:{
-        firstName:String,
-        lastName:String
-    }
-}
-function Person(props:propsType) {
+import { personProps} from './Person.type'
+function Person(props: personProps) {
   return (
     <div>{props.name.firstName} and {props.name.lastName}</div>
   )
