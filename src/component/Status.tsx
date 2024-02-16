@@ -2,13 +2,13 @@ import React from 'react'
 type propsType = {
     status: "loading" | "success" | "Error"
 }
-export const Status = (props: propsType) => {
+export const Status = ({ status }: propsType) => {
     let message
-    if (props.status === "loading") {
+    if (status === "loading") {
         message = "data getting loading......"
-    } else if (props.status === "success") {
+    } else if (status === "success") {
         message = "data get fetched"
-    } else if (props.status === "Error") {
+    } else if (status === "Error") {
         message = "Somthing Error Occured"
     }
     return (
