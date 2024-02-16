@@ -2,7 +2,7 @@ import React from 'react'
 import Person from './Person'
 type greetType = {
   name: String
-  messageCount: number
+  messageCount?: number
   isLoggedIn: boolean
 }
 export default function Greet(props: greetType) {
@@ -10,9 +10,10 @@ export default function Greet(props: greetType) {
     firstName:"Ramesh",
     lastName:"Banakar"
   }
+  const {messageCount=0}=props
   return (
     <>
-    {props.isLoggedIn ? <div>welcome {props.name}! you have {props.messageCount} unread messages</div> : <div>welcome Guest! you have {props.messageCount} unread messages</div>}
+    {props.isLoggedIn ? <div>welcome {props.name}! you have {messageCount} unread messages</div> : <div>welcome Guest! you have {messageCount} unread messages</div>}
     <Person name={personName}/>
     </>
   )
