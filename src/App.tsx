@@ -8,6 +8,7 @@ import { Oscar } from './component/Oscar';
 import PersonList from './component/PersonList';
 import  {Status}  from './component/Status';
 import Style from './component/Style';
+import Counter from './component/state/Counter';
 import LoggedIn from './component/state/LoggedIn';
 import User from './component/state/User';
 function App() {
@@ -44,7 +45,8 @@ function App() {
     // </div>
     <div>
       {/* <LoggedIn/> */}
-      <User/>
+      {/* <User/> */}
+      <Counter/>
     </div>
   );
 }
