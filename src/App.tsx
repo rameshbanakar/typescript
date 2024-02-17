@@ -8,6 +8,8 @@ import { Oscar } from './component/Oscar';
 import PersonList from './component/PersonList';
 import  {Status}  from './component/Status';
 import Style from './component/Style';
+import LoggedIn from './component/state/LoggedIn';
+import User from './component/state/User';
 function App() {
   // const listPerson=[
   //   {
@@ -35,10 +37,14 @@ function App() {
      
     // </div>
 
+    // <div>
+    //   <Button handleClick={(event,id)=>console.log("button clicked",event,id)}/>
+    //   <Input value="" handleChange={(event)=>console.log("from app component")}/>
+    //   <Style style={{height:"10px",width:"20px",border:"1px solid black"}}/>
+    // </div>
     <div>
-      <Button handleClick={(event,id)=>console.log("button clicked",event,id)}/>
-      <Input value="" handleChange={(event)=>console.log("from app component")}/>
-      <Style style={{height:"10px",width:"20px",border:"1px solid black"}}/>
+      {/* <LoggedIn/> */}
+      <User/>
     </div>
   );
 }
