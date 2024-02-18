@@ -9,6 +9,7 @@ import PersonList from './component/PersonList';
 import { Status } from './component/Status';
 import Style from './component/Style';
 import ListItem from './component/generics/ListItem';
+import RandomNumber from './component/restriction/RandomNumber';
 import Counter from './component/state/Counter';
 import DemoRef from './component/state/DemoRef';
 import LoggedIn from './component/state/LoggedIn';
@@ -50,7 +51,8 @@ function App() {
       {/* <User/> */}
       {/* <Counter/> */}
       {/* <DemoRef/> */}
-      <ListItem items={[{ id: 1, name: "Ramesh" }, { id: 2, name: "Veeresh" }]} onClick={(item) => console.log(item)} />
+      {/* <ListItem items={[{ id: 1, name: "Ramesh" }, { id: 2, name: "Veeresh" }]} onClick={(item) => console.log(item)} /> */}
+      <RandomNumber value={10} isPositive/>
     </div>
   );
 }
