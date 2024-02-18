@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 export default function LoggedIn() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
   const handleLogIn=()=>{
      setIsLoggedIn(true)
   }

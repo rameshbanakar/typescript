@@ -6,9 +6,11 @@ import Heading from './component/Heading';
 import Input from './component/Input';
 import { Oscar } from './component/Oscar';
 import PersonList from './component/PersonList';
-import  {Status}  from './component/Status';
+import { Status } from './component/Status';
 import Style from './component/Style';
+import ListItem from './component/generics/ListItem';
 import Counter from './component/state/Counter';
+import DemoRef from './component/state/DemoRef';
 import LoggedIn from './component/state/LoggedIn';
 import User from './component/state/User';
 function App() {
@@ -19,14 +21,14 @@ function App() {
   //   },{
   //     firstName: "Veeresh",
   //     lastName: "Banakar"
-      
+
   //   },{
   //     firstName: "kiran",
   //     lastName: "mane"
   //   }
   // ]
 
-  
+
   return (
     // <div className="App">
     //   <Greet name="Ramesh"  isLoggedIn={true}/>
@@ -35,7 +37,7 @@ function App() {
     //   <Oscar>
     //     <Heading>hello from heading</Heading>
     //   </Oscar>
-     
+
     // </div>
 
     // <div>
@@ -46,7 +48,9 @@ function App() {
     <div>
       {/* <LoggedIn/> */}
       {/* <User/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      {/* <DemoRef/> */}
+      <ListItem items={[{ id: 1, name: "Ramesh" }, { id: 2, name: "Veeresh" }]} onClick={(item) => console.log(item)} />
     </div>
   );
 }
